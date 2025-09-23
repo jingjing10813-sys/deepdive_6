@@ -6,51 +6,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Floating Button</title>
     <style>
-       .blind {
-      position: absolute;
-      clip: rect(0 0 0 0);
-      width: 1px;
-      height: 1px;
-      margin: -1px;
-      overflow: hidden;
-    }
+        html,
+        body {
+            scroll-behavior: smooth;
+        }
+        .blind {
+            position: absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+        }
 
-    .container {
-      max-width: 700px;
-      width: 100%;
-      margin: 50px auto;
-      border: 1px solid #a8a8a8;
-      border-radius: 15px;
-      padding: 1.5rem;
-      font: 1.2em/1.5 arial, sans-serif;
-      color: #333;
-      text-align: justify;
-    }
+        .container {
+            max-width: 700px;
+            width: 100%;
+            margin: 50px auto;
+            border: 1px solid #d8d8d8;
+            border-radius: 15px;
+            padding: 1.5rem;
+            font: 1.2em/1.5 arial, sans-serif;
+            color: #333;
+            text-align: justify;
+        }
 
-    .btn-container {
-      outline: 1px solid red
-      position: fixed;
-      right: 40px;
-      bottom: 40px;
-    }
+        .btn{
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid #d8d8d8;
+            background-color: #fff;
+            background-size: 16px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
 
-    .btn-setting {
-      width: 40px;
-      height: 40px;
-      border: 1px solid rgb(221, 221, 221);
-      background-color: white;
-      border-radius: 50%;
-      background-image: url(./images/icons/setting.svg); 
-      background-size: 50%;
-      background-repeat: no-repeat;
-      background-position: center;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
-      cursor: pointer;
-    }
+        .btn:hover {
+            background-color: #f3f3f3;
+        }
 
-    .btn-setting:hover {
-      background-color: #efeeee; 
-    }
+        .btn-container {
+            outline: 1px solid red;
+            position: fixed;
+            /* left, top, right, bottom */
+            right: 40px;
+            bottom: 40px;
+        }
+
+        .btn-setting {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid #d8d8d8;
+            background-color: #fff;
+            background-image: url('./images/icons/setting.svg');
+            background-size: 16px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .btn-setting:hover {
+            background-color: #f3f3f3;
+        }
+
+        .btn-top {
+            background-image: url('./images/Icons/anglesup.svg');
+            margin-right: 16px;
+        }
+
+        .btn-setting {
+            background-image: url('./images/Icons/setting.svg')
+        }
     </style>
 </head>
 
@@ -332,7 +364,7 @@
             laborum sed unde minus corporis ab eveniet nobis porro et facere praesentium voluptates ducimus perferendis.
             Dolorum, animi cupiditate, nesciunt necessitatibus beatae sit a laudantium odit molestiae et aspernatur sint
             expedita esse inventore facilis sequi tempora cum ea dolorem sunt, eius veniam. Fuga rerum aperiam esse!
-          Officiis deserunt vero odit sapiente asperiores nesciunt! Pariatur saepe eligendi necessitatibus minima qui
+            Officiis deserunt vero odit sapiente asperiores nesciunt! Pariatur saepe eligendi necessitatibus minima qui
             suscipit molestias ab voluptatem hic nostrum est blanditiis expedita omnis, fuga temporibus iusto tenetur
             placeat autem incidunt!
             Quaerat dolor quasi quos dolorem qui magnam. Enim ratione distinctio reiciendis fugit dolorem nihil eveniet
@@ -355,12 +387,15 @@
             Maxime fugit illum sunt veniam accusamus doloremque nostrum error. Et laboriosam ducimus soluta, adipisci
             unde
             est, nihil sequi alias beatae facilis, magni voluptate modi nisi ex! Cum debitis explicabo vel?
-        </p>  
+        </p>
     </div>
 
-     <div class="btn-container">
-    <button type="button" class="btn-setting">
-      <span class="blind">설정</span>
+    <div class="btn-container">
+        <a href="#" class="btn btn-top">
+            <span class="blind">위로가기</span>
+        </a>
+        <button type="button" class="btn btn-setting">
+            <span class="blind">설정</span>
         </button>
     </div>
 </body>
