@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>돔구조 이해</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f0f0f0;
+    }
+
+    p {
+        padding: 5px;
+        border-radius: 5px;
+        margin: 5px 0;
+        color: olivedrab;
+        background-color: #f9f9f9;
+        transition: background-color 0.2s;
+    }
+    .container > p:first-child {
+        font-weight: bold;
+        background-color: lightblue;
+    }
+
+    .container > p:first-child + p {
+        color: red;
+        font-style: italic;
+    }
+
+    .container > p:first-child ~ p {
+        letter-spacing: 1px;
+    }
+
+    .container > p:hover {
+        background-color: lightgray;
+    }
+
+    .grand-parent {
+        border: 2px solid #333;
+        padding: 15px;
+        margin-top: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+    }
+
+    .grand-parent > span {
+        display: inline-block;
+        margin-bottom: 10px;
+        color: #555;
+    }
+
+    .grand-parent > .parent {
+        border: 1px solid gray;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+
+    .parent > .child {
+        background-color: lightblue;
+        padding: 5px;
+        margin-top: 5px;
+        border-radius: 5px;
+    }
+
+    .parent > .second.child {
+        background-color: gold;
+        padding: 5px;
+        margin-top: 5px;
+        border-radius: 5px;
+    }
+
+    .parent > .second.child > span {
+        color: red;
+        font-weight: bold;
+        display: block;
+        margin-top: 3px;
+    }
+
+    .apple {
+        font-size: 20px;
+    }
+
+    .mango {
+        background-color: gold;
+    }
+
+    .apple.mango {
+        text-decoration: underline;
+    }
+
+    #berry {
+        text-decoration: none;
+        background-color: cadetblue;
+        color: #fff;
+    }
+
+</style>
+</head>
+<body>
+
+<div class="container">
+    <p class="apple">Hello, World</p>
+    <p>HTML</p>
+    <p class="apple mango">CSS</p>
+    <p class="mango">JavaScript</p>
+    <p class="apple mango" id="berry">ID is powerful!</p>
+</div>
+
+<div class="grand-parent">
+    Grand-parent
+    <span>SPAN 1</span>
+
+    <div class="parent">
+        Parent
+        <div class="child">
+            Child
+        </div>
+        <div class="second child">
+            Second-child
+            <span>SPAN inside Second-child</span>
+        </div>
+    </div>
+
+    <div class="parent">
+        Parent
+        <div class="child">
+            Child
+        </div>
+        <div class="second child">
+            Second-child
+            <span>SPAN inside Second-child</span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
