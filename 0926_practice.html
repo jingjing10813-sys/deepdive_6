@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0926 dom selector</title>
+    <style>
+        p {
+            color:olivedrab
+        }
+
+        .apple {
+            font-size: 30px;
+        }
+
+        .mango {
+            background-color: gold;
+        }
+
+        .apple.mango {
+            text-decoration: underline;
+        }
+
+        #berry {
+            text-decoration: none;
+            background-color: cadetblue;
+            color: #fff;
+        }
+
+        body > p {
+            border: 1px solid gray;
+        }
+
+        p:first-child {
+            font-weight: bold;
+        }
+
+        p:last-child {
+            font-style: italic;
+        }
+
+        p:nth-child(2) {
+            color: tomato;
+        }
+
+        p:hover {
+            background-color: lightgray;
+        }
+
+        p+p {
+            margin-top: 10px;
+        }
+
+        p~p {
+            letter-spacing: 1px;
+
+        }
+
+        p[class*="apple"] {
+            border-radius: 5px;
+        }
+
+        p[id^="b"] {
+            font-size: 25px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <p class="apple">Hello,World</p>
+    <p>HTML</p>
+    <p class="apple mango">CSS</p>
+    <p class="mango">JavaScript</p>
+    <p class="apple mango" id="berry">ID is powerfull!</p>
+    
+</body>
+</html>
