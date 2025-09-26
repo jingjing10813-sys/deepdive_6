@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트리구조 이해하기</title>
+    <style>
+        div {
+            padding: 1rem;
+        }
+        .grand-parent {
+            outline: 2px solid tomato;
+            width: 300px;
+        }
+        
+        .grand-parent span {
+            background-color: gold;
+        }
+
+        .grand-parent > span {
+            color: tomato;
+            font-size: 2em;
+        }
+
+        .grand-parent div {
+            font-style: italic;
+        }
+
+        .parent + div {
+            background-color: gray;
+        }
+
+        .parent {
+            outline: 2px solid olive;
+        }
+        .child {
+            outline: 2px solid dodgerblue;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="grand-parent">
+        Grand-parent
+        <span>SPAN 1</span>
+        <div class="parent">
+            Parent
+            <div class="child">
+                Chlid
+            </div>
+            <div class="second child">
+                Second-child
+                <span>SPAN</span>
+            </div>
+        </div>
+        <div class="parent">
+            Parent
+            <div class="child">
+                Chlid
+            </div>
+            <div class="second child">
+                Second-child
+                <span>SPAN</span>
+            </div>
+        </div>
+        
+            </div>
+        </div>
+    </div>
+</body>
+</html>
