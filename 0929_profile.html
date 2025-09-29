@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>profile</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+      background: #ffffff;
+    }
+
+    .profile-container {
+      width: 80%;
+      border: 2px solid #ddd;
+      padding: 10px;
+      display: flex;
+      overflow-x: auto;  
+      overflow-y: hidden;
+      gap: 20px;          
+    }
+
+    .profile-box {
+      flex: 0 0 auto;  
+      text-align: center;
+    }
+
+    .profile {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid rgb(162, 230, 255);
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.3s;
+      margin: 0 auto; 
+    }
+
+    .profile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.3s;
+    }
+
+    .profile:hover {
+      border-color: rgb(241, 118, 210); 
+      transform: scale(1.05);  
+    }
+
+    .profile:hover img {
+      transform: scale(1.2) rotate(5deg);
+    }
+
+    .profile-name {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #000000;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="profile-container">
+    <div class="profile-box">
+      <div class="profile"><img src="./images/ghost_n1.png" alt="profile"></div>
+      <div class="profile-name">유령1</div>
+    </div>
+
+    <div class="profile-box">
+      <div class="profile"><img src="./images/ghost_n2.png" alt="profile"></div>
+      <div class="profile-name">유령2</div>
+    </div>
+
+    <div class="profile-box">
+      <div class="profile"><img src="./images/ghost_n3.png" alt="profile"></div>
+      <div class="profile-name">유령3</div>
+    </div>
+
+    <div class="profile-box">
+      <div class="profile"><img src="./images/ghost_n4.png" alt="profile"></div>
+      <div class="profile-name">유령4</div>
+    </div>
+
+    <div class="profile-box">
+      <div class="profile"><img src="./images/ghost_n5.png" alt="profile"></div>
+      <div class="profile-name">유령5</div>
+    </div>
+
+    <div class="profile-box">
+      <div class="profile"><img src="./images/ghost_n6.png" alt="profile"></div>
+      <div class="profile-name">유령6</div>
+    </div>
+  </div>
+</body>
+</html>
