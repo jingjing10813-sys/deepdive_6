@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 500px;
+            height: 300px;
+            outline: 1px solid red;
+            display: flex;
+            margin: 100px auto; /*상하 좌우*/
+            justify-content: space-between; /* 행 정렬방향 */
+            /* flex-direction: column; /* 메인축 변경 기본값 row*/
+
+            align-items: center;
+            /* 기본값 stretch 부모의 높이만큼 올리기*/
+
+        }
+
+        .a {
+            background-color: tomato;
+        }
+
+        .b {
+            background-color: olive;
+        }
+
+        .c {
+            background-color: dodgerblue;
+        }
+
+        .btn-top {
+            width: 50px;
+            height: 50px;
+            background-color: tomato;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="#" class="btn-top">
+        TOP
+    </a>
+    <div class="container">
+        <div class="box a">A</div>
+        <div class="box b">B</div>
+        <div class="box c">C</div>
+    </div>
+    <div class="container">
+        <div class="box a">Hello</div>
+        <div class="box b">B</div>
+        <div class="box c">C</div>
+    </div>
+    
+</body>
+</html>
