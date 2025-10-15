@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variable 연습</title>
+    <style>
+        :root {
+            --color-primary: #12c812;
+            --color-body: #f3f3f3;
+            --color-text: #222;
+            --text-large: 1.5rem;
+            --radius-s: 8px;
+        }
+
+        body {
+            background-color: var(--color-body);
+            color: var(--color-text);
+            transition: 0.4s;
+        }
+
+        button {
+            color: #fff;
+            border: 2px solid var(--color-text);
+            height: 40px;
+            padding: 0 1.5rem;
+            background-color: var(--color-primary);
+            font-size: var(--text-large);
+            border-radius: var(--radius-s);
+        }
+        
+    </style>
+</head>
+<body>
+    <button type="botton" id="toggle">
+        Toggle Dark Mode
+    </button>
+    <script>
+        const btn = document.getElementById('toggle')
+        let isDark = false; //light mode
+
+        btn.addEventListener('click', () =>{
+            isDark = !isDark //isDark의 결과를 반대로 넣는다 !->부정연산지 NOT
+            console.log('isDark : ', isDark)
+            document.documentElement.style.setProperty('--color-body', isDark ? '#222' : '#e8e8e8')
+            document.documentElement.style.setProperty('--color-text', isDark ? '#e8e8e8' : '#222')
+        })
+    </script>
+    
+</body>
+</html>

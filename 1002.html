@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 400px;
+            outline: 1px solid red;
+           /* margin-top: 100px;
+            margin-left: auto;
+            margin-right: 0;
+            margin-bottom: 100px;
+            */
+            margin: 100px auto;
+            display: flex;
+
+            /* flex-wrap: wrap;*/
+            /*줄바꿈 허용(요소가 찌그러짐) */
+
+        }
+
+        footer {
+            background-color: gold;
+        }
+
+/* order의 기본값은 0*/
+        .a {
+            flex-basis: 150px;
+        }
+
+        .b{
+            flex-basis: 150px;
+            order: -1;
+        }
+
+        .c {
+            flex-basis: 150px;
+            flex-shrink: 0;
+        
+        }
+
+        .container div:nth-child(odd) {
+            background-color: tomato;
+        }
+
+        .container div:nth-child(even) {
+            background-color: #b8ca8f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <!--div.container + tab-->
+
+   <!--<section>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+    </section>--> 
+        
+    <!--<section>{$}*4-->
+
+    <img src="./images/ghost_n1.png" alt="" class="a">
+    <img src="./images/ghost_n2.png" alt="" class="b">
+    <img src="./images/ghost_n3.png" alt="" class="c">
+    <!--img*4--> 
+    </div>
+    <div class="container">
+        <div class="a">A</div>
+        <div class="b">B</div>
+        <div class="c">C</div>
+    </div>
+    <footer>Footer</footer>
+</body>
+</html>

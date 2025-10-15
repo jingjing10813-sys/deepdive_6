@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1014_variables.html</title>
+    <style>
+        :root {
+            --red : #c6523e;
+            --blue : #2424d5;
+            --gra1: linear-gradient(90deg,#020024 0%, #090979 35%, #00d4ff 100%);
+            --gra2: radial-gradient(circle,#22c1c3 0%, #fdbb2d 100%);
+            --text-l : 30px;
+            --text-m : 24px;
+            --text-s : 14px;
+
+
+        }
+
+        .box1 {
+            background-color: var(--red)
+        }
+
+        .box2 {
+            background-color: var(--blue);
+            font-size: var(--text-l);
+            background-image: var(--gra2);
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">Hello world</div>
+    <div class="box2">Hello world</div>
+    <script>
+        const apple = document.querySelector('.box')
+        apple.style.color = 'tomato'
+    </script>
+    
+</body>
+</html>
