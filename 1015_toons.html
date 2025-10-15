@@ -5,14 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1015_html_css 이해도</title>
     <link rel="stylesheet" href="./css/reset.css">
+    <style>
+    
+        body{
+            
+            background-color: #f3f3f3;
+            background-image:url(./images/v916-nunny-560.jpg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            color: white;
+            font-family: 'Poppins', 'Pretendard', 'Noto Sans KR', sans-serif;
+        }
+
+        :root {
+            --red : #e90080;
+            --black : #222;
+            --text-l : 30px;
+            --text-m : 24px;
+            --text-s : 14px;
+        }
+
+        .menuitem {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 20px;
+        }
+        .menuitem a {
+            text-decoration: none;
+            font-size: var(--text-m);
+            color: var(--black);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .menuitem a:hover {
+            color: var(--red);
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <header class="menuitem">
+    <header>
+    <ul class="menuitem">
       <li><a href="#">COMPANY</a></li>
       <li><a href="#">CAREERS</a></li>
       <li><a href="#">CONTACT</a></li>
       <li><a href="#">MEDIA</a></li>
       <li><a href="#">IMPACT</a></li>
+    </ul>
     </header>
     
 </body>
