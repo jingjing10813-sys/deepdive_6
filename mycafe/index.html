@@ -50,20 +50,17 @@
         decrease.addEventListener('click', () => {
            count = count -1;
            num.textContent = count;
+           totalPrice.textContent = total;
         })
 
         increase.addEventListener('click', () => {
             count = count +1;
             num.textContent = count;
+            totalPrice.textContent = total;
         })
     
 
-        // 주문하기 버튼 클릭시 계산하기
-        order.addEventListener('click', () => {
-            const total = price * count;
-            totalPrice.textContent = total;
-        })
-
+     
 
         
 
