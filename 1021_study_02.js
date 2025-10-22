@@ -53,7 +53,7 @@ const workMonths = 14;      // 근속 개월 수
 // 2. 평가 B 또는 6개월 이상 근속 → 부분 지급
 // 3. 그 외 → 대상 아님
 const bonus = (performance === "A" && workMonths >= 12)
-  ? "연말 보너스 지급 대상입니다 "
+  ? "연말 보너스 지급 대상입니다 💰"
   : (performance === "B" || workMonths >= 6)
     ? "부분 보너스 지급 대상입니다 "
     : "보너스 지급 대상이 아닙니다 ";
