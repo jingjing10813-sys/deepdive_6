@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="a">Hello</p>
+    <input type="text" id="b" placeholder="이름을 입력하세요" value="world">
+    <button type="button" id="btn">이름출력</button>
+
+    <script>
+        const p = document.getElementById('a')
+        const input = document.getElementById('b')
+        const btn = document.getElementById('btn')
+
+        btn.addEventListener('click', () => {
+            const name = input.value;
+            p.textContent = `your name is ${input.value}`
+            console.log(`data type is ${typeof name}`)
+            console.log(name + 3)
+        })
+    </script>
+</body>
+
+</html>
