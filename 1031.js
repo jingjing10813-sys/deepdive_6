@@ -10,7 +10,6 @@ function sum(a, b) {
 
 console.log(sum(3, 5)); 
 
-
 // 2. 함수 표현식 - 두 수의 나눈 몫 반환
 const div = function(a, b) {
   return Math.floor(a / b); 
